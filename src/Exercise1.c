@@ -19,7 +19,23 @@ int main(int argc, char *argv[]) {
 	float distance = atof(argv[1]);
 	int result;
 	//Your codes here
-	
-	printf("%d", result);
+	float Tongtien;
+    float a = 0;
+    printf("\n Nhap vao so Km: ");
+    scanf("%f", &Tongtien);
+    if(Tongtien <= 1)
+    {
+        a =  15000;
+    }
+    else if(Tongtien <= 30 && Tongtien > 1)
+    {
+        a = (Tongtien - 1)*8000 + 1*5000;
+    }
+    else
+    {
+        a = 15000 + 28*8000 + (Tongtien - 30)*5000;
+    }
+    printf("\n So tien phai tra: %0.3f VND", a);
+
 	return 0;
-}
+} //gcc .\src\Exercise1.c -o .\bin\Ex1.exe
