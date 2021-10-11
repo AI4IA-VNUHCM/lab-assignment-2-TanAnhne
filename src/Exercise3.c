@@ -6,16 +6,28 @@ ______________________________________
 | Output: 2 * 2 * 2 * 3              |
 |____________________________________|
 */
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-
 int main(int argc, char *argv[]) {
 	//testing variable, applying it to your algorithm for auto-evaluating
 	int testcase = atoi(argv[1]);
 	
 	//Your codes here
-	
-	
-	return 0;
-}
+	if (testcase<2){
+		printf("%d=",testcase);
+	}
+	else{
+		for (int i = 2; i<=testcase;i++){
+			printf("%d=",testcase);
+			while(testcase>1){
+				if(testcase%i==0){
+					printf("%d",i);
+					if(testcase!=i){
+						printf(" * ");
+					}
+					testcase/=i;}
+					else{
+						i++;
+					}
+				}
+			}
+		}
+	}
